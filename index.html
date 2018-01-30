@@ -1,63 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
     <title>Trivia</title>
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <style type="text/css">
+
+.selected {
+    background-color: red !important;
+}
+.hide {
+    display: none;
+}
+button, .btn {
+    margin: 5px;
+    border:1px solid #000 !important;
+    background-color: #fff;
+    border: 0;
+}
+#stop-game {
+    margin: 20px;
+}
+</style>
 </head>
 
 <body>
 
     <body background="assets/images/calvinhobbes.jpg">
 
-        <div class question>
-            <h3>When did Bill Waterson draw the first strip?</h3></div>
-        <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-primary active">
-                <input type="radio" name="options" id="option1" autocomplete="off" checked>  1985
-            </label>
-            <label class="btn btn-primary">
-                <input type="radio" name="options" id="option2" autocomplete="off">  1995
-            </label>
-            <label class="btn btn-primary">
-                <input type="radio" name="options" id="option3" autocomplete="off">  2002
-            </label>
+    	<div class="container">
+            <div id="game-wrap">
+                <h2 id="timer" class="hide"></h2>
+                <h3 id="correct" class="hide"></h3>
+                <h3 id="incorrect" class="hide"></h3>
+                <div id="main-content">
+                    <h1>Play Trivia Game</h1>
+                    <button id="start-game">START</button>
+                </div>
+            </div>
+            <div id="done">
+                <!-- after we click on the START button, the DONE button will be created. -->
+            </div>
         </div>
 
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 
-
-        <div class question>
-            <h3>After who was Calvin named?</h3></div>
-        <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-primary">
-                <input type="radio" name="options" id="answer1" autocomplete="off" checked>  Bill Watterson's ( the author's ) son.
-            </label>
-            <label class="btn btn-primary">
-                <input type="radio" name="options" id="answer2" autocomplete="off">  Bill Watterson's favorite toy from his childhood. 
-            </label>
-            <label class="btn btn-primary">
-                <input type="radio" name="options" id="answer3" autocomplete="off">  A sixteenth-century theologian who believed in predestination.
-            </label>
-        </div>
-
-
-
-
-        <div class question>
-            <h3>When did Bill Waterson draw the first strip?</h3></div>
-        <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-primary active">
-                <input type="radio" name="options" id="option1" autocomplete="off" checked>  1985
-            </label>
-            <label class="btn btn-primary">
-                <input type="radio" name="options" id="option2" autocomplete="off">  1995
-            </label>
-            <label class="btn btn-primary">
-                <input type="radio" name="options" id="option3" autocomplete="off">  2002
-            </label>
-        </div>
-    
-    </body>
-
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
 </html>
+
+
+
+        
